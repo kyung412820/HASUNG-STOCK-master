@@ -90,7 +90,11 @@
 
 ### Deep Learning
 
-- Data Guide를 이용해 추출한 데이터들을 활성화 함수(Sigmoid,Relu)함수, 모델을 Sequential로 사용해서 AI를 제작해 DL TOP20과 Volumn Rising을 구현하였습니다.
+- Data Guide를 이용해 추출한 데이터들을 z_score_normalize,MinMaxScaler 통해 정규화하였습니다.
+  - Z-score 정규화를 먼저 수행한 후에 Min-max 정규화를 추가로 적용하는 것은 데이터를 보다 일정한 범위로 조정하고자 하는 목적으로 이루어지는 과정
+- 특징점 감소를 위해 optimizers.Adam로 굴곡을 완화했습니다.
+- 모델을 Sequential로 사용해서 다층 퍼셉크론 AI를 제작해 DL TOP20과 Volumn Rising을 구현하였습니다.
+  - 비선형 적인 패턴을 가진 주식의 특성상 다층 퍼셉트론을 사용했으며 역전파 알고리즘을 사용하여 가중치를 업데이트하기 위해 사용했습니다
   - [DL TOP20 & Volumn Rising](https://github.com/jeeyoun-kang/HASUNG-STOCK/blob/master/Deep%20Learning/final.ipynb)
 
 ### Text Mining
